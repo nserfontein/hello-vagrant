@@ -1,0 +1,4 @@
+/modules/
+/.vagrant/
+/data/
+*.box
