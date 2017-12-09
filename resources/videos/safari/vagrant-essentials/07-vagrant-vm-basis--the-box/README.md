@@ -11,5 +11,4 @@ vagrant box list
 ### Use box
 ```bash
 vagrant init mybox
-vagrant up
 ```
