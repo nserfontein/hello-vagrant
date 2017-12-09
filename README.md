@@ -15,4 +15,4 @@ vagrant snapshot save snapshot1
 - FIXME: Sometimes network doesn't work after restore
 ```bash
 vagrant snapshot restore --no-provision snapshot1
-```§
+```
