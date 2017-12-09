@@ -7,9 +7,6 @@
 - https://app.vagrantup.com/boxes/search
 
 #### Run preconfigured box
-##### Run preconfigured box
-###### Run preconfigured box
-####### Run preconfigured box
 **Run preconfigured box**
 ```bash
 vagrant init bento/ubuntu-16.04
