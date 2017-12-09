@@ -6,7 +6,8 @@ vagrant up
 # Once-off:
 ```bash
 cd /www/myProject
-sudo chown -R 777 storage/
+# TODO: permission denied here:
+chown -R 777 storage/
 ```
 
 # Confirm
