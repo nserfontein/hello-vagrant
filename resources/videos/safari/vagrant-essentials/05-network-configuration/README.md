@@ -48,8 +48,7 @@ config.vm.network "public_network", ip: "10.0.0.200"
 ```
 
 # Using Multiple Network Options
-- 
-- 
-- 
-- 
+- Mix forwarded ports and public networks
+- Limited to number of network cards
+
 
