@@ -16,7 +16,7 @@ vagrant ssh
 ### Use one of the official boxes
 - https://app.vagrantup.com/boxes/search
 ```bash
-cd boxes/ubuntu16
+cd ubuntu16
 vagrant init bento/ubuntu-16.04
 # this will pull down the box and cache it for next time
 vagrant up --provider virtualbox
@@ -69,9 +69,14 @@ cd /vagrant
 - Edit Vagrantfile:
 ```ruby
 # disable preconfigured share
-config.vm.synched_folder ".", "/vagrant", disabled: true
+config.vm.synced_folder ".", "/vagrant", disabled: true
 # create custom share
-config.vm.synched_folder "host-path", "/guest-path"
+config.vm.synced_folder "host-path", "/guest-path"
+```
+```bash
+# on guest
+cd /guest-path
+cat test.txt
 ```
 
 # Network Access
