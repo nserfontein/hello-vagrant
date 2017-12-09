@@ -6,6 +6,8 @@ Vagrant.configure("2") do |config|
 
   config.vm.network "forwarded_port", host: 8080, guest: 80
 
-  config.vm.provision "shell", path: "deployLAMP.sh", privileged: false
+  config.vm.provision "chef_solo", run_list: ["lamp"]
+
+  config.vm.synced_folder "www", "/var/www"
 
 end
