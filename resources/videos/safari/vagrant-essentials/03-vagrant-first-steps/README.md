@@ -28,39 +28,58 @@ vagrant box add http://www.mywebsite.com/myvagrant.box
 ```
 
 # Communicating with Vagrant Box
-#### Status
+### Status
 ```bash
 vagrant status
 ```
 
-#### SSH
+### Change running state
+```bash
+vagrant suspend
+vagrant resume
+# graceful shutdown
+vagrant halt
+# forceful shutdown
+vagrant halt --force
+# remove VM (but not shared folders)
+vagrant destroy
+```
+
+### SSH
 ```bash
 vagrant ssh
 ```
 
-#### Shared folders
-##### Preconfigured share
-```bash
-vagrant ssh
-cd /vagrant
-```
-
-##### Custom share
-- Use case: source code
-- High performance penalty
-- Edit Vagrantfile:
-```yaml
-config.vm.synched_folder ".", "/vagrant", disabled: true
-config.vm.synched_folder "host-path", "/guest-path"
-```
-
-#### Reload Vagrantfile
+### Reload Vagrantfile
 - After making changes
 ```bash
 vagrant reload
 ``` 
 
+### Shared folders
+#### Preconfigured share
+```bash
+# on guest
+cd /vagrant
+```
 
+#### Custom share
+- Use case: source code
+- High performance penalty
+- Edit Vagrantfile:
+```ruby
+# disable preconfigured share
+config.vm.synched_folder ".", "/vagrant", disabled: true
+# create custom share
+config.vm.synched_folder "host-path", "/guest-path"
+```
+
+# Network Access
+### Port Forwarding
+- Edit Vagrantfile
+```ruby
+config.vm.network "forwarded_port", host: 8080, guest: 80
+```
 
 
 
