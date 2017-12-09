@@ -80,23 +80,3 @@ vim config/database.php
 # 'username' => env('DB_USERNAME', 'myProject'),
 # 'password' => env('DB_PASSWORD', 'mypassword'),
 ```
-
-# Deploying PHP framework
-
-
-
-# Deployment Continued
-
-
-
-# Vagrant Automation
-
-
-
-# Setting Infrastructure
-
-
-
-# Finalizing the Environment
-
-
