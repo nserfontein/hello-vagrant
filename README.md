@@ -1,3 +1,6 @@
+# Basics
+See resources/safari/vagrant-essentials
+
 # Snapshots
 ### List
 ```bash
